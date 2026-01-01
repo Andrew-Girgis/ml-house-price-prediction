@@ -1,6 +1,6 @@
 # House Price Prediction Using Linear Regression
 
-> **📌 Portfolio Showcase Project**  
+> **Portfolio Showcase Project**  
 > This repository serves as a demonstration of machine learning skills and methodology. The dataset used was provided as part of a technical assessment and is proprietary. This project showcases data analysis techniques, feature engineering approaches, and model development practices rather than being intended for public reproduction.
 
 ## Table of Contents
