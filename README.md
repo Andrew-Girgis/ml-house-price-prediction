@@ -1,5 +1,40 @@
 # House Price Prediction Using Linear Regression
 
+> **📌 Portfolio Showcase Project**  
+> This repository serves as a demonstration of machine learning skills and methodology. The dataset used was provided as part of a technical assessment and is proprietary. This project showcases data analysis techniques, feature engineering approaches, and model development practices rather than being intended for public reproduction.
+
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Objective](#objective)
+- [Dataset Description](#dataset-description)
+- [Methodology](#methodology)
+  - [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing)
+  - [Exploratory Data Analysis](#exploratory-data-analysis)
+  - [Feature Engineering](#feature-engineering)
+  - [Model Development](#model-development)
+- [Results](#results)
+  - [Model Performance](#model-performance)
+  - [Feature Importance](#feature-importance)
+- [Key Learnings](#key-learnings)
+  - [Exploratory Data Analysis Insights](#exploratory-data-analysis-insights)
+  - [Machine Learning Techniques](#machine-learning-techniques)
+- [Technical Implementation](#technical-implementation)
+- [Dataset Requirements](#dataset-requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Conclusion](#conclusion)
+- [Author](#author)
+- [License](#license)
+
+## Key Skills Demonstrated
+
+- End-to-end ML workflow: cleaning → EDA → feature engineering → modeling → evaluation
+- Scikit-learn preprocessing with `Pipeline` + `ColumnTransformer` (scaling + one-hot encoding)
+- Feature engineering and multicollinearity handling (composites, log transforms, correlation-based pruning)
+- Model evaluation and interpretation (RMSE/R², log-target error interpretation, coefficient-based importance)
+- Reproducibility practices (train/test split with fixed random seed)
+
 ## Project Overview
 
 This project develops a complete machine learning pipeline to predict residential home sale prices based on various property characteristics. The dataset covers housing sales from 2006-2010, a period marked by significant market volatility including the 2008 financial crisis. Using linear regression as the primary modeling approach, this project demonstrates robust data preprocessing, feature engineering, and model evaluation techniques.
@@ -187,6 +222,90 @@ The dominance of temporal features (`YearSold`, `YearSold_squared`) highlights h
 
 **Python Version:** 3.13.2
 
+## Dataset Requirements
+
+This project requires a housing dataset with the following features:
+- Physical characteristics (lot area, living area, basement area, garage specifications)
+- Quality metrics (overall quality and condition ratings 1-10)
+- Property details (building type, house style, foundation type)
+- Amenities (bathrooms, garage capacity, central air)
+- Temporal features (year built, year sold)
+- Transaction details (sale price, sale type, sale condition)
+
+**Note:** The original dataset used in this project was provided as part of a technical assessment and is not publicly distributable. However, you can use similar publicly available datasets such as:
+- [Ames Housing Dataset](https://www.kaggle.com/datasets/prevek18/ames-housing-dataset) - Comprehensive housing data from Ames, Iowa
+- [House Prices - Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) - Kaggle competition with similar features
+
+## Installation
+
+### Prerequisites
+- Python 3.8 or higher
+- pip package manager
+
+### Setup Instructions
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/Andrew-Girgis/ml-house-price-prediction.git
+cd ml-house-price-prediction
+```
+
+2. **Create a virtual environment:**
+```bash
+python -m venv venv
+```
+
+3. **Activate the virtual environment:**
+```bash
+# On macOS/Linux:
+source venv/bin/activate
+
+# On Windows:
+venv\Scripts\activate
+```
+
+4. **Install required dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+This notebook is intended as a walkthrough; exact results may vary with different datasets.
+
+### Running the Analysis
+
+1. **Start Jupyter Notebook:**
+```bash
+jupyter notebook
+```
+
+2. **Open the notebook:**
+Navigate to `house_price_prediction.ipynb` in the Jupyter interface that opens in your browser.
+
+3. **Run the analysis:**
+Execute the cells sequentially from top to bottom using `Shift + Enter` or use "Run All" from the Cell menu.
+
+### Project Files
+
+- `house_price_prediction.ipynb`: Main Jupyter notebook containing the complete analysis pipeline
+- `dataset.csv`: Dataset file location (not included — proprietary); place your dataset here
+- `requirements.txt`: Python package dependencies
+- `images/`: Generated visualizations and plots
+- `README.md`: This documentation file
+
+### Expected Outputs
+
+The notebook will generate:
+- Data cleaning and preprocessing steps
+- Exploratory data analysis visualizations
+- Feature engineering transformations
+- Trained linear regression model
+- Model evaluation metrics (RMSE, R-squared)
+- Feature importance analysis
+
+All visualizations are saved in the `images/` directory.
+
 ## Conclusion
 
 This project successfully developed a linear regression model that predicts house sale prices with 89% variance explained (R² = 0.8911) and an average prediction error of approximately $26,000 (14.4% relative error). The analysis demonstrated the importance of thorough exploratory data analysis, strategic feature engineering, and careful handling of real-world data quality issues.
@@ -196,3 +315,7 @@ The unexpectedly high importance of temporal features underscores how economic c
 ## Author
 
 Andrew Girgis
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
